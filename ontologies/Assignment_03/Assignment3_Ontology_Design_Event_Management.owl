@@ -1,0 +1,2528 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/surender/ontologies/2020/4/testing1"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/surender/ontologies/2020/4/testing1">
+    <Prefix name="" IRI="http://www.semanticweb.org/surender/ontologies/2020/4/testing1"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal>Ontology Design for Event Management Sys-
+tem in IIT Madras
+IIT Madras is one of the premiere engineering institutions of India. Like
+any engineering college, it also organises a lot of events. Our group in this
+assignment is trying to design an Ontological knowledge base for the various
+events organised in the college.
+We have broadly divided the events in four categories.
+1. Shaastra and Saarang
+2. Sports Events
+3. Leisure time Activities
+
+We have chosen this topic for our Ontology Design as it is very diverse and
+challenging involving various design verticals.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:priorVersion"/>
+        <AbbreviatedIRI>owl:Thing</AbbreviatedIRI>
+    </Annotation>
+    <Declaration>
+        <Class IRI="#AcademicTopic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Accomodation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AccomodationTeam"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Activity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Advertisement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AwarenessPoster"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Band"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BasketballMatch"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BasketballTeam"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Campaign"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CampusAmbassador"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Captain"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Club"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Coach"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Committee"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Concert"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Contest"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ContestLoser"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ContestWinner"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CricketMatch"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CricketTeam"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Day"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DayCelebration"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Declamation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DeclamationTeam"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Device"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Entertainment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Event"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EventPromotion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EventWebpage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Faculty"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Fest"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Field"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FootballMatch"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FootballTeam"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Form"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Game"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GiftsAndPrizes"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GiftsAndPrizesTeam"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GoogleForm"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Hackathon"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Hashtags"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HockeyMatch"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HockeyTeam"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LeisureTimeActivities"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LiteraryEvent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Literature"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LongCompetition"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Match"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MegaContest"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MiniContest"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Money"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MoneyEvent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MultipleDayEvent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NonAcademicTopic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OneDayEvent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OnlineContest"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OnlineGaming"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OnlinePlatform"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OnlineTrends"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Organization"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PRTeam"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PUBGWars"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Participation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Person"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Player"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Points"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Polling"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Poster"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PrimeShow"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PublicRelation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Quiz"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#QuizTeam"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Robowars"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ShowStopper"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SocialAdvertisement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SocialInitiative"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SocialMedia"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SocialMediaWebpage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SocialMessage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SpecialGuest"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sponsor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sport"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SportsLoser"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SportsTeam"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SportsWinner"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SpotlightLectureSeries"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SpotlightSpeaker"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Staff"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Student"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Team"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TeamEvent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TennisMatch"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TennisTeam"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Time"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Topic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Venue"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#VolleyballMatch"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#VolleyballTeam"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Volunteer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Webpage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Winner"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Workshop"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Year"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#affiliatedWith"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#assists"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#attendedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#attends"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#awarded"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#campaignedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#comprisesOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#donates"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#givenBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasCaptain"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasCoach"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasDeclamationTeam"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasDuration"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasEndTime"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasEntryFee"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasLoser"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasLost"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasMembers"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasMotive"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasOutcome"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasPartner"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasPlayed"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasPlayer"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasPrize"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasPrizesAndGifts"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasQuizTeam"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasStartTime"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasTeams"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasTopic"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasWinner"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasWon"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#heldOn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hostedIn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#interestedIn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#invites"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isAdvertisedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isSponsoredBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#managedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#manages"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#organizedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#organizes"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#participatedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#playedFor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#playedOn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#preparedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#promotes"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#purpose"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#recognisedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#relatedTo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#scheduledAt"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#specializesIn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#usedFor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#usedIn"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IITM"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PS4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ProgrammingClub"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SRA"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#AccomodationTeam"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Committee"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#purpose"/>
+                <Class IRI="#Accomodation"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#AwarenessPoster"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Poster"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#isAdvertisedBy"/>
+                <Class IRI="#Club"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#preparedBy"/>
+                <Class IRI="#Club"/>
+            </ObjectSomeValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#hasMotive"/>
+                <Class IRI="#SocialMessage"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#BasketballMatch"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Sport"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasOutcome"/>
+                <ObjectUnionOf>
+                    <Class IRI="#SportsLoser"/>
+                    <Class IRI="#SportsWinner"/>
+                </ObjectUnionOf>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#heldOn"/>
+                <Class IRI="#Day"/>
+            </ObjectSomeValuesFrom>
+            <ObjectMinCardinality cardinality="2">
+                <ObjectProperty IRI="#participatedBy"/>
+                <Class IRI="#BasketballTeam"/>
+            </ObjectMinCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#BasketballTeam"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#SportsTeam"/>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#hasCaptain"/>
+                <Class IRI="#Captain"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#hasCoach"/>
+                <Class IRI="#Coach"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="5">
+                <ObjectProperty IRI="#hasPlayer"/>
+                <Class IRI="#Player"/>
+            </ObjectExactCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Campaign"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Event"/>
+            <ObjectMinCardinality cardinality="30">
+                <ObjectProperty IRI="#campaignedBy"/>
+                <Class IRI="#Person"/>
+            </ObjectMinCardinality>
+            <ObjectMinCardinality cardinality="2">
+                <ObjectProperty IRI="#organizedBy"/>
+                <Class IRI="#Club"/>
+            </ObjectMinCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#CampusAmbassador"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Student"/>
+            <ObjectComplementOf>
+                <ObjectHasValue>
+                    <ObjectProperty IRI="#affiliatedWith"/>
+                    <NamedIndividual IRI="#IITM"/>
+                </ObjectHasValue>
+            </ObjectComplementOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#promotes"/>
+                <Class IRI="#Event"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Club"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Team"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#organizes"/>
+                <Class IRI="#Event"/>
+            </ObjectSomeValuesFrom>
+            <ObjectMinCardinality cardinality="1">
+                <ObjectProperty IRI="#interestedIn"/>
+                <Class IRI="#Field"/>
+            </ObjectMinCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Coach"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Person"/>
+            <ObjectMinCardinality cardinality="50">
+                <ObjectProperty IRI="#hasPlayed"/>
+                <Class IRI="#Match"/>
+            </ObjectMinCardinality>
+            <ObjectMinCardinality cardinality="3">
+                <ObjectProperty IRI="#playedFor"/>
+                <Class IRI="#Year"/>
+            </ObjectMinCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Committee"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Team"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#manages"/>
+                <Class IRI="#Event"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Concert"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#MoneyEvent"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#givenBy"/>
+                <Class IRI="#Band"/>
+            </ObjectSomeValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#purpose"/>
+                <Class IRI="#Entertainment"/>
+            </ObjectAllValuesFrom>
+            <ObjectMinCardinality cardinality="100">
+                <ObjectProperty IRI="#attendedBy"/>
+                <Class IRI="#Person"/>
+            </ObjectMinCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Contest"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Event"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasLoser"/>
+                <Class IRI="#ContestLoser"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasPrizesAndGifts"/>
+                <Class IRI="#Money"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasWinner"/>
+                <Class IRI="#ContestWinner"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#ContestLoser"/>
+        <ObjectIntersectionOf>
+            <ObjectUnionOf>
+                <Class IRI="#Person"/>
+                <Class IRI="#Team"/>
+            </ObjectUnionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasLost"/>
+                <Class IRI="#Contest"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#ContestWinner"/>
+        <ObjectUnionOf>
+            <Class IRI="#Person"/>
+            <ObjectIntersectionOf>
+                <Class IRI="#Team"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#hasWon"/>
+                    <Class IRI="#Contest"/>
+                </ObjectSomeValuesFrom>
+            </ObjectIntersectionOf>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#CricketMatch"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Sport"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasOutcome"/>
+                <ObjectUnionOf>
+                    <Class IRI="#SportsLoser"/>
+                    <Class IRI="#SportsWinner"/>
+                </ObjectUnionOf>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#heldOn"/>
+                <Class IRI="#Day"/>
+            </ObjectSomeValuesFrom>
+            <ObjectMinCardinality cardinality="2">
+                <ObjectProperty IRI="#participatedBy"/>
+                <Class IRI="#CricketTeam"/>
+            </ObjectMinCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#CricketTeam"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#SportsTeam"/>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#hasCaptain"/>
+                <Class IRI="#Captain"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#hasCoach"/>
+                <Class IRI="#Coach"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="11">
+                <ObjectProperty IRI="#hasPlayer"/>
+                <Class IRI="#Player"/>
+            </ObjectExactCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#DayCelebration"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Event"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasMotive"/>
+                <Class IRI="#OnlineTrends"/>
+            </ObjectSomeValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#isAdvertisedBy"/>
+                <Class IRI="#PRTeam"/>
+            </ObjectAllValuesFrom>
+            <ObjectMinCardinality cardinality="1">
+                <ObjectProperty IRI="#comprisesOf"/>
+                <Class IRI="#Hashtags"/>
+            </ObjectMinCardinality>
+            <ObjectMinCardinality cardinality="2">
+                <ObjectProperty IRI="#scheduledAt"/>
+                <Class IRI="#SocialMedia"/>
+            </ObjectMinCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Declamation"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#LeisureTimeActivities"/>
+            <Class IRI="#OneDayEvent"/>
+            <ObjectMinCardinality cardinality="2">
+                <ObjectProperty IRI="#hasDeclamationTeam"/>
+                <Class IRI="#DeclamationTeam"/>
+            </ObjectMinCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#hasTopic"/>
+                <Class IRI="#Topic"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#scheduledAt"/>
+                <Class IRI="#Venue"/>
+            </ObjectExactCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#DeclamationTeam"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Team"/>
+            <ObjectMaxCardinality cardinality="1">
+                <ObjectProperty IRI="#hasMembers"/>
+                <Class IRI="#Student"/>
+            </ObjectMaxCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Event"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Activity"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasEndTime"/>
+                <Class IRI="#Time"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasStartTime"/>
+                <Class IRI="#Time"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#scheduledAt"/>
+                <Class IRI="#Venue"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#EventPromotion"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Event"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#promotes"/>
+                <Class IRI="#Event"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Fest"/>
+        <ObjectIntersectionOf>
+            <ObjectMinCardinality cardinality="50">
+                <ObjectProperty IRI="#comprisesOf"/>
+                <Class IRI="#Event"/>
+            </ObjectMinCardinality>
+            <ObjectMinCardinality cardinality="50">
+                <ObjectProperty IRI="#managedBy"/>
+                <Class IRI="#Club"/>
+            </ObjectMinCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#FootballMatch"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Sport"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasOutcome"/>
+                <ObjectUnionOf>
+                    <Class IRI="#SportsLoser"/>
+                    <Class IRI="#SportsWinner"/>
+                </ObjectUnionOf>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#heldOn"/>
+                <Class IRI="#Day"/>
+            </ObjectSomeValuesFrom>
+            <ObjectMinCardinality cardinality="2">
+                <ObjectProperty IRI="#participatedBy"/>
+                <Class IRI="#FootballTeam"/>
+            </ObjectMinCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#FootballTeam"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#SportsTeam"/>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#hasCaptain"/>
+                <Class IRI="#Captain"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#hasCoach"/>
+                <Class IRI="#Coach"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="11">
+                <ObjectProperty IRI="#hasPlayer"/>
+                <Class IRI="#Player"/>
+            </ObjectExactCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#GiftsAndPrizesTeam"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Committee"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#purpose"/>
+                <Class IRI="#GiftsAndPrizes"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#GoogleForm"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Form"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#purpose"/>
+                <Class IRI="#Participation"/>
+            </ObjectAllValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#purpose"/>
+                <Class IRI="#Polling"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Hackathon"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Event"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasPrize"/>
+                <Class IRI="#Money"/>
+            </ObjectSomeValuesFrom>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#organizedBy"/>
+                <NamedIndividual IRI="#ProgrammingClub"/>
+            </ObjectHasValue>
+            <ObjectMinCardinality cardinality="2">
+                <ObjectProperty IRI="#participatedBy"/>
+                <Class IRI="#Team"/>
+            </ObjectMinCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Hashtags"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#EventPromotion"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#usedFor"/>
+                <Class IRI="#SocialAdvertisement"/>
+            </ObjectSomeValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#purpose"/>
+                <Class IRI="#OnlineTrends"/>
+            </ObjectAllValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#usedIn"/>
+                <Class IRI="#SocialMedia"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#HockeyMatch"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Sport"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasOutcome"/>
+                <ObjectUnionOf>
+                    <Class IRI="#SportsLoser"/>
+                    <Class IRI="#SportsWinner"/>
+                </ObjectUnionOf>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#heldOn"/>
+                <Class IRI="#Day"/>
+            </ObjectSomeValuesFrom>
+            <ObjectMinCardinality cardinality="2">
+                <ObjectProperty IRI="#participatedBy"/>
+                <Class IRI="#HockeyTeam"/>
+            </ObjectMinCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#HockeyTeam"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#SportsTeam"/>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#hasCaptain"/>
+                <Class IRI="#Captain"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#hasCoach"/>
+                <Class IRI="#Coach"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="11">
+                <ObjectProperty IRI="#hasPlayer"/>
+                <Class IRI="#Player"/>
+            </ObjectExactCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#LiteraryEvent"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Contest"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#managedBy"/>
+                <Class IRI="#Club"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#relatedTo"/>
+                <Class IRI="#Literature"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#LongCompetition"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Contest"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasDuration"/>
+                <ObjectUnionOf>
+                    <Class IRI="#MultipleDayEvent"/>
+                    <Class IRI="#OneDayEvent"/>
+                </ObjectUnionOf>
+            </ObjectSomeValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#participatedBy"/>
+                <Class IRI="#Team"/>
+            </ObjectAllValuesFrom>
+            <ObjectMinCardinality cardinality="2">
+                <ObjectProperty IRI="#managedBy"/>
+                <Class IRI="#Club"/>
+            </ObjectMinCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#MegaContest"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Contest"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasPrizesAndGifts"/>
+                <Class IRI="#Money"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#isSponsoredBy"/>
+                <Class IRI="#Sponsor"/>
+            </ObjectSomeValuesFrom>
+            <ObjectMinCardinality cardinality="50">
+                <ObjectProperty IRI="#participatedBy"/>
+                <Class IRI="#Person"/>
+            </ObjectMinCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#MiniContest"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Contest"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#isSponsoredBy"/>
+                <Class IRI="#Club"/>
+            </ObjectSomeValuesFrom>
+            <ObjectMaxCardinality cardinality="50">
+                <ObjectProperty IRI="#participatedBy"/>
+                <Class IRI="#Person"/>
+            </ObjectMaxCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#MoneyEvent"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Event"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasEntryFee"/>
+                <Class IRI="#Money"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#MultipleDayEvent"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Event"/>
+            <ObjectMinCardinality cardinality="2">
+                <ObjectProperty IRI="#heldOn"/>
+                <Class IRI="#Day"/>
+            </ObjectMinCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#OneDayEvent"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Event"/>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#heldOn"/>
+                <Class IRI="#Day"/>
+            </ObjectExactCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#OnlineContest"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Contest"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#managedBy"/>
+                <Class IRI="#Club"/>
+            </ObjectSomeValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#hostedIn"/>
+                <Class IRI="#OnlinePlatform"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#OnlineGaming"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#OnlineContest"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#affiliatedWith"/>
+                <Class IRI="#Game"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#PRTeam"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Committee"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#promotes"/>
+                <Class IRI="#Sponsor"/>
+            </ObjectAllValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#purpose"/>
+                <Class IRI="#PublicRelation"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#PUBGWars"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Event"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasPrize"/>
+                <Class IRI="#Money"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#participatedBy"/>
+                <Class IRI="#Team"/>
+            </ObjectSomeValuesFrom>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#playedOn"/>
+                <NamedIndividual IRI="#PS4"/>
+            </ObjectHasValue>
+            <ObjectMaxCardinality cardinality="12">
+                <ObjectProperty IRI="#hasTeams"/>
+                <Class IRI="#Team"/>
+            </ObjectMaxCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Player"/>
+        <ObjectUnionOf>
+            <Class IRI="#Faculty"/>
+            <Class IRI="#Student"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#PrimeShow"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#MoneyEvent"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#givenBy"/>
+                <Class IRI="#ShowStopper"/>
+            </ObjectAllValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#purpose"/>
+                <Class IRI="#Entertainment"/>
+            </ObjectAllValuesFrom>
+            <ObjectMinCardinality cardinality="500">
+                <ObjectProperty IRI="#attendedBy"/>
+                <Class IRI="#Person"/>
+            </ObjectMinCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#PublicRelation"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Activity"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasMotive"/>
+                <Class IRI="#OnlineTrends"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#manages"/>
+                <Class IRI="#EventWebpage"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#manages"/>
+                <Class IRI="#SocialMediaWebpage"/>
+            </ObjectSomeValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#invites"/>
+                <Class IRI="#ShowStopper"/>
+            </ObjectAllValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#invites"/>
+                <Class IRI="#SpecialGuest"/>
+            </ObjectAllValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#promotes"/>
+                <Class IRI="#Event"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Quiz"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#LeisureTimeActivities"/>
+            <Class IRI="#OneDayEvent"/>
+            <ObjectMinCardinality cardinality="3">
+                <ObjectProperty IRI="#hasQuizTeam"/>
+                <Class IRI="#QuizTeam"/>
+            </ObjectMinCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#hasTopic"/>
+                <Class IRI="#Topic"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#scheduledAt"/>
+                <Class IRI="#Venue"/>
+            </ObjectExactCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#QuizTeam"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Team"/>
+            <ObjectExactCardinality cardinality="3">
+                <ObjectProperty IRI="#hasMembers"/>
+                <Class IRI="#Student"/>
+            </ObjectExactCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Robowars"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Event"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasPrize"/>
+                <Class IRI="#Money"/>
+            </ObjectSomeValuesFrom>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#organizedBy"/>
+                <NamedIndividual IRI="#SRA"/>
+            </ObjectHasValue>
+            <ObjectMinCardinality cardinality="2">
+                <ObjectProperty IRI="#participatedBy"/>
+                <Class IRI="#Team"/>
+            </ObjectMinCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#ShowStopper"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Person"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#specializesIn"/>
+                <Class IRI="#Field"/>
+            </ObjectSomeValuesFrom>
+            <ObjectMinCardinality cardinality="1000000">
+                <ObjectProperty IRI="#recognisedBy"/>
+                <Class IRI="#Person"/>
+            </ObjectMinCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#SocialInitiative"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Event"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasPartner"/>
+                <Class IRI="#Organization"/>
+            </ObjectSomeValuesFrom>
+            <ObjectMinCardinality cardinality="5">
+                <ObjectProperty IRI="#participatedBy"/>
+                <Class IRI="#Volunteer"/>
+            </ObjectMinCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Sponsor"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Organization"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#donates"/>
+                <Class IRI="#Money"/>
+            </ObjectSomeValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#purpose"/>
+                <Class IRI="#Advertisement"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Sport"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Sport"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasOutcome"/>
+                <ObjectUnionOf>
+                    <Class IRI="#SportsLoser"/>
+                    <Class IRI="#SportsWinner"/>
+                </ObjectUnionOf>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#heldOn"/>
+                <Class IRI="#Day"/>
+            </ObjectSomeValuesFrom>
+            <ObjectMinCardinality cardinality="2">
+                <ObjectProperty IRI="#participatedBy"/>
+                <Class IRI="#VolleyballTeam"/>
+            </ObjectMinCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#SportsLoser"/>
+        <ObjectUnionOf>
+            <Class IRI="#Person"/>
+            <ObjectIntersectionOf>
+                <Class IRI="#Team"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#hasLost"/>
+                    <Class IRI="#Sport"/>
+                </ObjectSomeValuesFrom>
+                <ObjectExactCardinality cardinality="0">
+                    <ObjectProperty IRI="#awarded"/>
+                    <Class IRI="#Points"/>
+                </ObjectExactCardinality>
+            </ObjectIntersectionOf>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#SportsTeam"/>
+        <ObjectUnionOf>
+            <Class IRI="#BasketballTeam"/>
+            <Class IRI="#CricketTeam"/>
+            <Class IRI="#FootballTeam"/>
+            <Class IRI="#HockeyTeam"/>
+            <Class IRI="#TennisTeam"/>
+            <Class IRI="#VolleyballTeam"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#SportsWinner"/>
+        <ObjectUnionOf>
+            <Class IRI="#Person"/>
+            <ObjectIntersectionOf>
+                <Class IRI="#Team"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#hasWon"/>
+                    <Class IRI="#Sport"/>
+                </ObjectSomeValuesFrom>
+                <ObjectExactCardinality cardinality="2">
+                    <ObjectProperty IRI="#awarded"/>
+                    <Class IRI="#Points"/>
+                </ObjectExactCardinality>
+            </ObjectIntersectionOf>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#SpotlightLectureSeries"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Event"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#attendedBy"/>
+                <Class abbreviatedIRI="owl:Thing"/>
+            </ObjectSomeValuesFrom>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#givenBy"/>
+                <Class IRI="#SpotlightSpeaker"/>
+            </ObjectExactCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#SpotlightSpeaker"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Person"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#specializesIn"/>
+                <Class IRI="#Field"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Team"/>
+        <ObjectMinCardinality cardinality="2">
+            <ObjectProperty IRI="#hasMembers"/>
+            <Class IRI="#Person"/>
+        </ObjectMinCardinality>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#TeamEvent"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Event"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#managedBy"/>
+                <Class IRI="#Club"/>
+            </ObjectSomeValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="#participatedBy"/>
+                <Class IRI="#Team"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#TennisMatch"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Sport"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasOutcome"/>
+                <ObjectUnionOf>
+                    <Class IRI="#SportsLoser"/>
+                    <Class IRI="#SportsWinner"/>
+                </ObjectUnionOf>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#heldOn"/>
+                <Class IRI="#Day"/>
+            </ObjectSomeValuesFrom>
+            <ObjectMinCardinality cardinality="2">
+                <ObjectProperty IRI="#participatedBy"/>
+                <Class IRI="#TennisTeam"/>
+            </ObjectMinCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#TennisTeam"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#SportsTeam"/>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#hasCaptain"/>
+                <Class IRI="#Captain"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#hasCoach"/>
+                <Class IRI="#Coach"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="2">
+                <ObjectProperty IRI="#hasPlayer"/>
+                <Class IRI="#Player"/>
+            </ObjectExactCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Topic"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#AcademicTopic"/>
+            <Class IRI="#NonAcademicTopic"/>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#VolleyballMatch"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Sport"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#hasOutcome"/>
+                <ObjectUnionOf>
+                    <Class IRI="#SportsLoser"/>
+                    <Class IRI="#SportsWinner"/>
+                </ObjectUnionOf>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#heldOn"/>
+                <Class IRI="#Day"/>
+            </ObjectSomeValuesFrom>
+            <ObjectMinCardinality cardinality="2">
+                <ObjectProperty IRI="#participatedBy"/>
+                <Class IRI="#VolleyballTeam"/>
+            </ObjectMinCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#VolleyballTeam"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#SportsTeam"/>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#hasCaptain"/>
+                <Class IRI="#Captain"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="#hasCoach"/>
+                <Class IRI="#Coach"/>
+            </ObjectExactCardinality>
+            <ObjectExactCardinality cardinality="6">
+                <ObjectProperty IRI="#hasPlayer"/>
+                <Class IRI="#Player"/>
+            </ObjectExactCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Volunteer"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Student"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#assists"/>
+                <Class IRI="#Event"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Winner"/>
+        <ObjectUnionOf>
+            <Class IRI="#Person"/>
+            <Class IRI="#Team"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Workshop"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Event"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#attends"/>
+                <Class IRI="#Student"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#organizedBy"/>
+                <Class IRI="#Club"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#AcademicTopic"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Accomodation"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Activity"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Advertisement"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AwarenessPoster"/>
+        <Class IRI="#Poster"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Band"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BasketballMatch"/>
+        <Class IRI="#Sport"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BasketballTeam"/>
+        <Class IRI="#SportsTeam"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Campaign"/>
+        <Class IRI="#Event"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CampusAmbassador"/>
+        <Class IRI="#Student"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Captain"/>
+        <Class IRI="#Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Coach"/>
+        <Class IRI="#Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Contest"/>
+        <Class IRI="#Event"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ContestLoser"/>
+        <Class IRI="#Winner"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ContestWinner"/>
+        <Class IRI="#Winner"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CricketMatch"/>
+        <Class IRI="#Sport"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CricketTeam"/>
+        <Class IRI="#SportsTeam"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Day"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DayCelebration"/>
+        <Class IRI="#Event"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Declamation"/>
+        <Class IRI="#LeisureTimeActivities"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DeclamationTeam"/>
+        <Class IRI="#Team"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Event"/>
+        <Class IRI="#Activity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EventPromotion"/>
+        <Class IRI="#Event"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EventWebpage"/>
+        <Class IRI="#Webpage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Faculty"/>
+        <Class IRI="#Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fest"/>
+        <Class IRI="#Event"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FootballMatch"/>
+        <Class IRI="#Sport"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FootballTeam"/>
+        <Class IRI="#SportsTeam"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GoogleForm"/>
+        <Class IRI="#Form"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Hashtags"/>
+        <Class IRI="#EventPromotion"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HockeyMatch"/>
+        <Class IRI="#Sport"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HockeyTeam"/>
+        <Class IRI="#SportsTeam"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LeisureTimeActivities"/>
+        <Class IRI="#Activity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LiteraryEvent"/>
+        <Class IRI="#Contest"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LongCompetition"/>
+        <Class IRI="#Contest"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Match"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MegaContest"/>
+        <Class IRI="#Contest"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MiniContest"/>
+        <Class IRI="#Contest"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MultipleDayEvent"/>
+        <Class IRI="#Event"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NonAcademicTopic"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OnlineContest"/>
+        <Class IRI="#Contest"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OnlineGaming"/>
+        <Class IRI="#OnlineContest"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OnlinePlatform"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Player"/>
+        <Class IRI="#Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Points"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PublicRelation"/>
+        <Class IRI="#Activity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Quiz"/>
+        <Class IRI="#LeisureTimeActivities"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#QuizTeam"/>
+        <Class IRI="#Team"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SocialAdvertisement"/>
+        <Class IRI="#Advertisement"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SocialInitiative"/>
+        <Class IRI="#Event"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SocialMediaWebpage"/>
+        <Class IRI="#Webpage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SpecialGuest"/>
+        <Class IRI="#Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sponsor"/>
+        <Class IRI="#Organization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sport"/>
+        <Class IRI="#Event"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SportsLoser"/>
+        <Class IRI="#Winner"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SportsTeam"/>
+        <Class IRI="#Team"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SportsWinner"/>
+        <Class IRI="#Winner"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SpotlightLectureSeries"/>
+        <Class IRI="#Event"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SpotlightSpeaker"/>
+        <Class IRI="#Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Staff"/>
+        <Class IRI="#Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Student"/>
+        <Class IRI="#Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Team"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TeamEvent"/>
+        <Class IRI="#Event"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TennisMatch"/>
+        <Class IRI="#Sport"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TennisTeam"/>
+        <Class IRI="#SportsTeam"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Topic"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#VolleyballMatch"/>
+        <Class IRI="#Sport"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#VolleyballTeam"/>
+        <Class IRI="#SportsTeam"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Volunteer"/>
+        <Class IRI="#Student"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Workshop"/>
+        <Class IRI="#Event"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Year"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#Organization"/>
+        <NamedIndividual IRI="#IITM"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Device"/>
+        <NamedIndividual IRI="#PS4"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Club"/>
+        <NamedIndividual IRI="#ProgrammingClub"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Club"/>
+        <NamedIndividual IRI="#SRA"/>
+    </ClassAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#affiliatedWith"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#assists"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#attendedBy"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#campaignedBy"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#comprisesOf"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#donates"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#givenBy"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasDeclamationTeam"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasDuration"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasEntryFee"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasMembers"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasMotive"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasPartner"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasPrize"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasPrizesAndGifts"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasStartTime"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasTeams"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasTopic"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasWinner"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#heldOn"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hostedIn"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#interestedIn"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#invites"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isAdvertisedBy"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isSponsoredBy"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#managedBy"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#manages"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#organizedBy"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#organizes"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#participatedBy"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#playedOn"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#preparedBy"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#promotes"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#purpose"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#recognisedBy"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#relatedTo"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#scheduledAt"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#specializesIn"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#usedFor"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#usedIn"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#attendedBy"/>
+        <ObjectProperty IRI="#attends"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#managedBy"/>
+        <ObjectProperty IRI="#manages"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#organizedBy"/>
+        <ObjectProperty IRI="#organizes"/>
+    </InverseObjectProperties>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="#attends"/>
+    </InverseFunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="#hasMembers"/>
+    </InverseFunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="#hasQuizTeam"/>
+    </InverseFunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="#hasTopic"/>
+    </InverseFunctionalObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasMembers"/>
+        <Class IRI="#QuizTeam"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasQuizTeam"/>
+        <Class IRI="#Quiz"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasTopic"/>
+        <Class IRI="#Declamation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasMembers"/>
+        <Class IRI="#Student"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasQuizTeam"/>
+        <Class IRI="#QuizTeam"/>
+    </ObjectPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#AcademicTopic</IRI>
+        <Literal>Any topic related to academic events.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Accomodation</IRI>
+        <Literal>It deals with the accomodation like guest room etc related details.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#AccomodationTeam</IRI>
+        <Literal xml:lang="en">Accommodation teams are people from management team
+who provide accommodation.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Activity</IRI>
+        <Literal>Any kind of activity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Advertisement</IRI>
+        <Literal>Any kind of advertisement for campaign or promotion.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#AwarenessPoster</IRI>
+        <Literal xml:lang="en">Awareness posters are prepared and advertised by awareness clubs like MITRA. They help in spreading awareness and helps up
+in a social or medical awareness cause like COVID-19 posters</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Band</IRI>
+        <Literal>The bands present for an event</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#BasketballMatch</IRI>
+        <Literal>Basketball match is an event that is played between two basketball teams at a venue on a specified date.  It has either a winner or a loser</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#BasketballTeam</IRI>
+        <Literal>Basketball Team comprises of 5 players, a coach and a captain</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Campaign</IRI>
+        <Literal xml:lang="en">Campaigns are also event which bring people together for a common cause, which is either social or technical.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#CampusAmbassador</IRI>
+        <Literal>Campus Ambassador is a student who is not affiliated
+to IIT Madras and promotes event.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Captain</IRI>
+        <Literal>The captain of a Sports Team.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Club</IRI>
+        <Literal>Club is a team that is interested in at least one field
+and organizes event.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Committee</IRI>
+        <Literal>Committee is a team that manages all the events.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Concert</IRI>
+        <Literal xml:lang="en">Concerts are events which are given by bands and attended by people for entertainment purpose.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Contest</IRI>
+        <Literal>Contests are events which have at least one winner.
+Some contests have prize money while others have gifts.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ContestLoser</IRI>
+        <Literal>A person or team who lost a Contest.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ContestWinner</IRI>
+        <Literal>A person or team who won a Contest.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#CricketMatch</IRI>
+        <Literal>Cricket match is an event that is played between two cricket teams at a venue on a specified date.  It has either a winner or a loser</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#CricketTeam</IRI>
+        <Literal>Cricket  Team  comprises  of  11  players,  a  coach  and  a captain.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Day</IRI>
+        <Literal>Days on which an event is organised.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#DayCelebration</IRI>
+        <Literal xml:lang="en">Day Celebration is advertised by PR Team, with setting online trends in mind. It comprises of hashtags in social media.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Declamation</IRI>
+        <Literal xml:lang="en">Declamation is a one day competition where in students
+deliver their views on a particular academic or non academic topic.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#DeclamationTeam</IRI>
+        <Literal xml:lang="en">Each declamation team consists of one student member
+only.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Device</IRI>
+        <Literal>The list of devices to play online games.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Entertainment</IRI>
+        <Literal>Any activity related to entertainment.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Event</IRI>
+        <Literal>Event is an activity that is scheduled at a venue and
+has start time and end time.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#EventPromotion</IRI>
+        <Literal>Any Activity done to promote an event or activity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Fest</IRI>
+        <Literal>Fest is a collection of many events which are managed
+by a committee. It can be either technical or cultural and is managed
+by many clubs together.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Field</IRI>
+        <Literal>Any field of specilisation.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#FootballMatch</IRI>
+        <Literal>Football match is an event that is played between two football teams at a venue on a specified date.  It has either a winner or a loser</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#FootballTeam</IRI>
+        <Literal>Football Team comprises of 11 players, a coach and a captain.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Form</IRI>
+        <Literal>Different kinds of forms for polling</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Game</IRI>
+        <Literal>Any kind of gaming activity.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#GiftsAndPrizes</IRI>
+        <Literal>All the gifts and prizes distributed duuring the event.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#GiftsAndPrizesTeam</IRI>
+        <Literal xml:lang="en">Gifts and prizes team is a team of people from management team who arrange for gifts and prizes for competition winners</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#GoogleForm</IRI>
+        <Literal xml:lang="en">Google forms are used for managing participants as well
+as collecting their data as well as for polling purposes.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Hackathon</IRI>
+        <Literal xml:lang="en">Hackathon is an event that has at least 2 teams participating and is organized by Programming Club and has money prize.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Hashtags</IRI>
+        <Literal>Hashtags are used in SocialMedia Platforms to get online trends.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#HockeyMatch</IRI>
+        <Literal>Hockey match is an event that is played between two hockey teams at a venue on a specified date.  It has either a winner or a loser</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#HockeyTeam</IRI>
+        <Literal>Hockey Team comprises of 11 players, a coach and a captain.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#LeisureTimeActivities</IRI>
+        <Literal>A set of activities categorised as Leisure time activities.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#LiteraryEvent</IRI>
+        <Literal xml:lang="en">Literary events are managed by some literary clubs and
+is related to literature and art.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Literature</IRI>
+        <Literal>Different kinds of Literature.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#LongCompetition</IRI>
+        <Literal xml:lang="en">Long Competitions are contests which are at least one
+day long and are managed by at least 2 clubs.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Match</IRI>
+        <Literal>Sports events like a cricket match or a volleyball match or a football match etc.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#MegaContest</IRI>
+        <Literal xml:lang="en">Mega Contests are contests which have either prize
+money. Participation occurs on a large scale and they require special attention.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#MiniContest</IRI>
+        <Literal>Mini Contests are contests in which participation occurs on a small scale. They act as fillers in the complete fests and are special in their own ways.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Money</IRI>
+        <Literal>Different amount of monetary amount.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#MoneyEvent</IRI>
+        <Literal>Money-events are events which have entry fee and which
+have start as well as end time.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#MultipleDayEvent</IRI>
+        <Literal>A event which occurs on many days.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#NonAcademicTopic</IRI>
+        <Literal>Any topic related to any event except for academic topic.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OneDayEvent</IRI>
+        <Literal xml:lang="en">One day event is an event which finishes within a day.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OnlineContest</IRI>
+        <Literal xml:lang="en">Online Contests are contests which are held online.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OnlineGaming</IRI>
+        <Literal xml:lang="en">Online Gaming Contests are online video games managed by clubs.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OnlinePlatform</IRI>
+        <Literal>Any platform available on the internet for organizing an event.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OnlineTrends</IRI>
+        <Literal>Trends related to leading trend on Online platforms.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Organization</IRI>
+        <Literal>Any organization like NGO or firms participating in any event.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#PRTeam</IRI>
+        <Literal xml:lang="en">PR team is a team of people from management team
+who are involved in public relation.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#PUBGWars</IRI>
+        <Literal xml:lang="en">:PUBGWars is an event that is participated by teams and
+at most 12 teams can participate and has money as prize.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Participation</IRI>
+        <Literal>Any entity, tool; or platform whose purpose is participation.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Person</IRI>
+        <Literal>Any person participating in any event.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Player</IRI>
+        <Literal xml:lang="en">Player can be a student or faculty who plays a sports.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Points</IRI>
+        <Literal>The points awarded for winning or losing  a sports event</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Polling</IRI>
+        <Literal>Any kind of voting and the tools aiding in it.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Poster</IRI>
+        <Literal>Posters whose aim is to promote an event or spread social awareness.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#PrimeShow</IRI>
+        <Literal xml:lang="en">Prime show is generally the final event given by the
+show-stopper who is the main celebrity guest, who may be a big singer
+and its attended by at least 500 people.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#PublicRelation</IRI>
+        <Literal xml:lang="en">Public Relation involves managing event as well as social media web page of event and promoting events. It also involves
+bringing in eminent guests of honor and show-stopper.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Quiz</IRI>
+        <Literal xml:lang="en">Quiz is a one day competition on academic or non academic topic between more three or more teams.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#QuizTeam</IRI>
+        <Literal xml:lang="en">A quiz team will consist of 3 members who are students.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Robowars</IRI>
+        <Literal xml:lang="en">Robowars is an event that has at least 2 teams participating and is organized by SRA and has money prize.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ShowStopper</IRI>
+        <Literal xml:lang="en">Show-stopper is a person who specialises in any genre
+and is famous and known my millions in the country or globe.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SocialAdvertisement</IRI>
+        <Literal>Advertisement promoting Social causes.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SocialInitiative</IRI>
+        <Literal xml:lang="en">Social initiative is an event that is participated by at
+least five volunteers and has some organization as partner.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SocialMedia</IRI>
+        <Literal>It denotes the various Social Media Platforms like Facebook,Twitter, Google Plus.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SocialMessage</IRI>
+        <Literal>Various messages given and promoted by social Initiatives and campaigns.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Sponsor</IRI>
+        <Literal>Sponsor is an organization that donates amount for advertisement.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SportsLoser</IRI>
+        <Literal>A person or team who lost a Sports event.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SportsTeam</IRI>
+        <Literal xml:lang="en">Sports team consists of Captain,coach and players. The
+coach can be a faculty or a staff from college.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SportsWinner</IRI>
+        <Literal>A person or team who won a Sports event.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SpotlightLectureSeries</IRI>
+        <Literal xml:lang="en">Spotlight Lecture series is an event that is attended by
+anyone and is given by exactly one Spotlight speaker.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SpotlightSpeaker</IRI>
+        <Literal xml:lang="en">Spotlight speaker is a person who specializes in at least
+one field.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Team</IRI>
+        <Literal>Anything which has more than two person as members
+is a team.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#TeamEvent</IRI>
+        <Literal xml:lang="en">Team events are participated by teams only and are
+managed by clubs.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#TennisMatch</IRI>
+        <Literal>Tennis match is an event that is played between two tennis  teams at a venue on a specified date.  It has either a winner or a loser</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#TennisTeam</IRI>
+        <Literal>Tennis Team comprises of 2 players, a coach and a captain.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Time</IRI>
+        <Literal>It denotes the time at which an event has takjen place.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Topic</IRI>
+        <Literal>Any topic for discussion.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Venue</IRI>
+        <Literal>It denotes the venue for any event</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#VolleyballMatch</IRI>
+        <Literal>Volleyball match is an event that is played between two volleyball teams at a venue on a specified date.  It has either a winner or a loser</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#VolleyballTeam</IRI>
+        <Literal>Volleyball Team comprises of 6 players, a coach and a captain.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Volunteer</IRI>
+        <Literal>Volunteer is a student who assists in at least one event.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Webpage</IRI>
+        <Literal>Any webpage used for any event in IIT Madras</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Winner</IRI>
+        <Literal>A person or a team who wins an event be it sports event or contest etc.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Workshop</IRI>
+        <Literal>A workshop for skill enhancement.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Year</IRI>
+        <Literal>Indicates Year as a time period.</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

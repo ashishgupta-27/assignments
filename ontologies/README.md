@@ -1,0 +1,1 @@
+The assignments uploaded are all a part of the ontologies course. The assignments are all inter linked and help to build an ontological model that can act as a knowledge base and any application processing the ontological model can be developed.

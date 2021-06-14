@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 
+
+DTD Authors: 
+
+Rahul Solanki (CS19M002) 
+Surender Singh Kalalia (CS19M003)
+Abhinav Anurag (CS19M007)
+Anurag Mohanty (CS19M011)
+Ashish Rajkumar Gupta (CS19M012) 
+
+-->
+
+<!-- doc: Case Convention: 
+
+Tbox: First Letter of each word is Capital. Example Team, DeclamationTeam,MoneyEvents etc.;
+Relation: Use Camel casing. Example: relatedTo, comprisesOf etc. 
+-->
+
+<!-- doc: Information about Shaastra and Saarang -->
+<!-- doc: Information about Organization. It has 2 Fields viz. Name and Type(eg. Educational, Financial, IT) -->
+
+<!ELEMENT Organization (Name, Type)>
+<!ELEMENT Name (#PCDATA)>
+<!ELEMENT Type (#PCDATA)>
+
+<!-- doc: Information about Person. It consists of different Fields like FirstName, LastName, Organization,DOB etc -->
+
+<!ELEMENT Person (FirstName,(LastName)?,Organization,(Department)?,Program?,DOB)>
+<!ELEMENT FirstName (#PCDATA)>
+<!ELEMENT LastName (#PCDATA)>
+<!ELEMENT Department (#PCDATA)>
+<!ELEMENT Program (#PCDATA)>
+<!ELEMENT DOB (Day,Month,Year)>
+<!ELEMENT Day (#PCDATA)>
+<!ELEMENT Month (#PCDATA)>
+<!ELEMENT Year (#PCDATA)>
+
+<!ATTLIST Person Gender (Male|Female|Others) #REQUIRED>
+
+<!-- doc: Information about Event. Event is an Activity that is scheduled at a Venue and
+has start Time and end Time. -->
+
+<!ELEMENT Event (Activity, scheduledAt+, hasStartTime+, hasEndTime+)>
+<!ELEMENT Activity (Name,Description)>
+<!ELEMENT Description (#PCDATA)>
+<!ELEMENT scheduledAt (Venue)>
+<!ELEMENT Venue (#PCDATA)>
+<!ELEMENT Date (Day,Month,Year)>
+<!ELEMENT hasStartTime (Time)>
+<!ELEMENT Time (#PCDATA)>
+<!ELEMENT hasEndTime (Time)>
+
+<!-- doc: Information about Volunteer. Volunteer is a Student who assists in at least one Event. -->
+
+<!ELEMENT Volunteer (Student, assists)>
+<!ELEMENT Student (Person)>
+<!ELEMENT assists (Event+)>
+
+<!-- doc: Information about Team. Anything which has more than two Person as members
+is a Team. -->
+
+<!ELEMENT Team (Name?,hasMembers)>
+<!ELEMENT hasMembers (Person+|Student+)>
+
+<!-- doc: Information about Club. Club is a Team that is interested in at least one Field
+and organizes Event. -->
+
+<!ELEMENT Club (Team, interestedIn, organizes )>
+<!ELEMENT interestedIn (Field+)>
+<!ELEMENT Field (#PCDATA)>
+<!ELEMENT organizes (Event+)>
+
+<!-- doc: Information about Committee. Committee is a Team that manages all the Events. -->
+
+<!ELEMENT Committee (Team, manages)>
+<!ELEMENT purpose (Advertisement,Social-Advertisement,Accomodation,Polling)>
+<!ELEMENT manages (Event+)>
+
+<!-- doc: Information about Money. Money has two Fields viz. Currency Type and Amount. -->
+
+<!ELEMENT Money (currencyType, Amount)>
+<!ELEMENT currencyType (#PCDATA)>
+<!ELEMENT Amount (#PCDATA)>
+
+<!-- doc: Information about Sponsor. Sponsor is an Organization that donates Amount for ad-
+vertisement. -->
+
+<!ELEMENT Sponsor (Organization, donates+, purpose )>
+<!ELEMENT donates (Money)>
+
+<!-- doc: Information about Campus ambassador. Campus Ambassador is a Student who is not affiliated
+to IIT Madras and promotes Event. -->
+
+<!ELEMENT CampusAmbassador (Student, affiliatedWith, promotes )>
+<!ELEMENT affiliatedWith (Organization,Game)>
+<!ELEMENT promotes (Event+)>
+
+<!-- doc: Information about Spotlight lecture series  speaker . Spotlight speaker is a Person who specializes in at least
+one Field. -->
+
+<!ELEMENT SpotlightSpeaker (Person, specializesIn )>
+<!ELEMENT specializesIn (Field+)>
+
+<!-- doc: Information about Spotlight lecture series. Spotlight Lecture series is an Event that is attended by
+anyone and is given by exactly one Spotlight speaker. -->
+
+<!ELEMENT SpotLecSeries (Event, attendedBy, givenBy )>
+<!ELEMENT attendedBy ((Person)+|(Student)+) >
+<!ELEMENT givenBy (SpotlightSpeaker+)>
+
+<!-- doc: Information about Hackathon. Hackathon is an Event that has at least 2 Teams partic-
+ipating and is organized by Programming Club and has Money prize. -->
+
+<!ELEMENT Hackathon (Event, participatedBy, organizedBy, hasPrizesAndGifts )>
+<!ELEMENT participatedBy ((Team)+|(Volunteer)+| SportsTeam)>
+
+<!-- doc: Information about Robowars. Robowars is an Event that has at least 2 Teams partici-
+pating and is organized by SRA and has Money prize. -->
+
+<!ELEMENT Robowars (Event, participatedBy, organizedBy, hasPrizesAndGifts )>
+
+<!-- doc: Information about Social initiative. Social initiative is an Event that is participated by at
+least five Volunteers and has some Organization as partner. -->
+
+<!ELEMENT SocialInitiative (Event, participatedBy, hasPartner)>
+<!ELEMENT hasPartner (Organization)>
+
+<!-- doc: Information about Fest. Fest is an Event in which Students attend and is
+organized by some Club. -->
+
+<!ELEMENT Fest (Event, managedBy)>
+
+<!-- doc: Information about Workshop. Workshop is an Event in which Students attend and is
+organized by some Club. -->
+
+<!ELEMENT workshop (Event,attends,organizedBy)>
+<!ELEMENT attends (#PCDATA) >
+
+<!-- doc: Information about PUBG Wars. PUBG Wars is an Event that is participated by Teams and
+at most 12 Teams can participate and has Money as prize. -->
+
+<!ELEMENT Pubgwars (Event, participatedBy,hasTeams, playedOn, hasPrizesAndGifts)>
+<!ELEMENT playedOn (Device)>
+<!ELEMENT Device (#PCDATA)>
+<!ELEMENT hasTeams (Team+) >
+
+<!-- doc: Information about Mega Events  -->
+
+<!ELEMENT Contest (Event,haswinner,hasloser,hasPrizesAndGifts) >
+<!ELEMENT MegaContest (Contest,isSponsoredBy+,hasPrizesAndGifts,participatedBy) >
+<!ELEMENT isSponsoredBy (Sponsor) >
+<!ELEMENT hasPrizesAndGifts (Money) >
+
+<!ELEMENT ContestWinner (Person+,Team+,hasWon) >
+<!ELEMENT ContestLoser (Person+,Team+,hasLost) >
+<!ELEMENT hasWon (Contest+|Match+) >
+<!ELEMENT hasLost (Contest+|Match+) >
+<!ELEMENT haswinner (ContestWinner) >
+<!ELEMENT hasloser (ContestLoser) >
+
+
+<!--  doc: Information about Mini Contests -->
+
+<!ELEMENT Minicontest (Contest,isSponsoredBy?,participatedBy) >
+
+<!--  doc : Information about Campaigns -->
+
+<!ELEMENT Campaign (Event,campaignedby+,organizedBy+) >
+<!ELEMENT campaignedby (#PCDATA) >
+<!ELEMENT organizedBy ((Club)+)>
+
+<!-- doc : Information about Awarweness Posters -->
+
+<!ELEMENT Awarenessposters (Posters,isAdvertisedBy,hasMotive+,preparedby) >
+<!ELEMENT isAdvertisedBy (Club) >
+<!ELEMENT hasMotive (SocialMessage) >
+<!ELEMENT preparedby (Club) >
+<!ELEMENT Posters (#PCDATA) >
+<!ELEMENT SocialMessage (#PCDATA) >
+
+<!--  doc : Information about Event Promotions -->
+
+<!ELEMENT EventPromotion (Event,promotes) >
+<!ELEMENT Hashtags (EventPromotion,usedFor+,purpose+,usedIn) >
+<!ELEMENT usedFor (Social-Advertisement) >
+<!ELEMENT Advertisement (#PCDATA) >
+<!ELEMENT Accomodation (#PCDATA) >
+<!ELEMENT Polling (#PCDATA) >
+<!ELEMENT GiftAndPrizes (#PCDATA) >
+<!ELEMENT Social-Advertisement (#PCDATA) >
+ <!ELEMENT usedIn (Social-Media)>
+<!ELEMENT Social-Media (#PCDATA) >
+<!ELEMENT Online-trends (#PCDATA) >
+<!ELEMENT Form (#PCDATA) >
+
+<!-- doc : Information about Concert -->
+
+<!ELEMENT Concert (MoneyEvents,givenBy, purpose, attendedBy+) >
+<!ELEMENT MoneyEvents (Event,hasEntryFee) >
+<!ELEMENT hasEntryFee (Money) >
+
+<!-- doc Information about PrimeShow -->
+
+<!ELEMENT PrimeShow (MoneyEvents,givenBy,purpose,attendedBy+) >
+
+<!-- doc Information about Show Stopper -->
+
+<!ELEMENT ShowStopper (Person,specializesIn,recognisedBy+)>
+<!ELEMENT recognisedBy (Person) >
+
+<!-- doc Information about Accommodation Team -->
+
+<!ELEMENT AccommodationTeam (Committee,purpose)>
+
+<!-- doc Information about Gifts And Prizes Team -->
+
+<!ELEMENT GiftsAndPrizesTeam (Committee,purpose) >
+
+<!-- doc Information about PublicRelation -->
+
+<!ELEMENT PublicRelation (Activity,manages+,promotes+,invites,hasMotive)>
+<!ELEMENT invites (SpecialGuest,ShowStopper) >
+<!ELEMENT SpecialGuest (#PCDATA) >
+
+<!-- doc Information about PRTeam -->
+
+<!ELEMENT PRTeam (Committee,purpose,promotes) >
+
+<!-- doc Information about GoogleForm -->
+
+<!ELEMENT GoogleForm (Form,purpose) >
+
+<!--  doc Information about Literary Events -->
+
+<!ELEMENT LiteraryEvent (Contest,relatedTo,managedBy) >
+<!ELEMENT managedBy (#PCDATA) >
+<!ELEMENT relatedTo (Literature)>
+<!ELEMENT Literature (#PCDATA)>
+
+<!-- doc Information about Team Events -->
+
+<!ELEMENT TeamEvent (Event,participatedBy,managedBy) >
+
+<!-- doc Information about Day Celebrations -->
+
+<!ELEMENT DayCelebration (Event,isAdvertisedBy,hasMotive,comprisesOf,scheduledAt)>
+<!ELEMENT comprisesOf (Event) >
+
+<!-- doc Information about Online Contests -->
+
+<!ELEMENT OnlineContest (Contest,managedBy,hostedIn)>
+<!ELEMENT hostedIn (OnlinePlatform) >
+<!ELEMENT OnlinePlatform (#PCDATA) >
+
+<!-- doc Information about Online Gaming -->
+
+<!ELEMENT OnlineGaming (OnlineContest,affiliatedWith) >
+<!ELEMENT Game (#PCDATA)>
+
+<!-- doc Information about Long Competition -->
+
+<!ELEMENT LongCompetition (Contest,participatedBy,managedBy,hasDuration) >
+<!ELEMENT hasDuration (OneDayEvent,MultipleDayEvent)>
+
+<!-- doc: Information about One Day Events -->
+
+<!ELEMENT OneDayEvent (Event, heldOn) >
+<!ELEMENT heldOn (Day) >
+
+<!-- doc: MultipleDay Events -->
+
+<!ELEMENT MultipleDayEvent (Event, heldOn+) >
+
+
+<!-- doc: Information about Leisure Time Activities -->
+
+<!-- doc: Information about Quiz Team -->
+
+<!ELEMENT QuizTeam (Team,hasMembers)>
+
+
+<!-- doc: Information about Quiz Eventa-->
+
+<!ELEMENT Quiz (LeisureTimeActivities,OneDayEvent,hasTopic, hasQuizTeam+,scheduledAt) >
+<!ELEMENT hasQuizTeam (QuizTeam) >
+<!ELEMENT hasTopic (#PCDATA) >
+<!ELEMENT LeisureTimeActivities (#PCDATA) >
+
+<!-- doc: Information about Declamation Team -->
+
+<!ELEMENT DeclamationTeam (Team,hasMembers)>
+
+<!-- doc: Information about Quiz Event-->
+
+<!ELEMENT Declamation (LeisureTimeActivities,OneDayEvent,hasTopic, DeclamationTeam+,Venue) >
+
+<!-- doc: Information about Player -->
+
+<!ELEMENT Player (Student|Faculty)>
+<!ELEMENT Faculty (#PCDATA)>
+
+<!-- doc: Information about Coach -->
+
+<!ELEMENT Coach (Person,playedFor+,hasPlayed)>
+<!ELEMENT Captain (#PCDATA)>
+<!ELEMENT playedFor (#PCDATA)>
+<!ELEMENT hasPlayed (#PCDATA)>
+<!ELEMENT hasCoach (Coach)>
+<!ELEMENT hasPlayer (Player)>
+<!ELEMENT hasCaptain (Captain)>
+
+<!-- doc: Information about Sports Team -->
+
+<!ELEMENT CricketTeam (SportsTeam,hasCoach,hasPlayer,hasCaptain)>
+<!ELEMENT HockeyTeam (SportsTeam,hasCoach,hasPlayer,hasCaptain)>
+<!ELEMENT FootballTeam (SportsTeam,hasCoach,hasPlayer,hasCaptain)>
+<!ELEMENT BasketballTeam (SportsTeam,hasCoach,hasPlayer,hasCaptain)>
+<!ELEMENT VolleyballTeam (SportsTeam,hasCoach,hasPlayer,hasCaptain)>
+<!ELEMENT TennisTeam (SportsTeam,hasCoach,hasPlayer,hasCaptain)>
+<!ELEMENT SportsTeam (CricketTeam | HockeyTeam | FootballTeam | BasketballTeam | VolleyballTeam | TennisTeam)>
+
+<!-- doc: Information about Sports Matches -->
+
+<!ELEMENT hasOutcome (SportsWinner,SportsLoser)>
+
+
+<!ELEMENT CricketMatch (SportsTeam,participatedBy,hasOutcome,heldOn)>
+<!ELEMENT HockeyMatch (SportsTeam,participatedBy,hasOutcome,heldOn)>
+<!ELEMENT FootballMatch (SportsTeam,participatedBy,hasOutcome,heldOn)>
+<!ELEMENT BasketballMatch (SportsTeam,participatedBy,hasOutcome,heldOn)>
+<!ELEMENT VolleyballMatch (SportsTeam,participatedBy,hasOutcome,heldOn)>
+<!ELEMENT TennisMatch (SportsTeam,participatedBy,hasOutcome,heldOn)>
+<!ELEMENT Points (#PCDATA)>
+<!ELEMENT awarded (Points)>
+<!ELEMENT Match (CricketMatch,HockeyMatch,FootballMatch,BasketballMatch,VolleyballMatch,TennisMatch)>
+
+<!-- doc: Information about Sports Winners / Losers -->
+
+<!ELEMENT SportsWinner ((Player|Team),hasWon,awarded)>
+<!ELEMENT SportsLoser ((Player|Team),hasLost,awarded)>
