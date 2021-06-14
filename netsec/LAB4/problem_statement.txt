@@ -1,0 +1,93 @@
+The objective of this task is to implement the functionality of an SSH client and an SSH server using the
+socket interface and needed crytographic routines. This is to help familiarize yourself with the working of
+SSH which is being used extensively. You may use C/C++, Python or Java.
+
+There are two major components to the software: (i) the SSH server, and (ii) the SSH client. The communication
+will be based on TCP sockets.
+
+SSH Server
+The purpose of the SSH server is to respond to the commands sent by the SSH client. The server is expected
+to be up and running on the remote machine, listening to a specific port.
+The server software contains these major components:
+(i) NETWORK INTERFACE: This is responsible for processing the request from client, and passing it to
+the COMMAND PROCESSOR.
+(ii) COMMAND PROCESSOR: This is responsible for processing the client’s command, running appropriate
+system commands and then passing the generated output to the NETWORK INTERFACE.
+
+When the server is started, it creates its pair of public and private keys and stores in a default directory
+called serverkeys as serverpub.txt and serverpriv.txt.
+
+The server contains one more directory called UserCredentials which contains a file for every user.
+Each file is named with the respective user name such as username.txt. These files contain the username
+in first line and password in the second line for the respective user. When a user connects to the SSH
+server via SSH client, the client is authenticated using the corresponding username file. The username is an
+8-character string (where, the characters are chosen from the set lowercase characters ’a’–’z’ and ’0’ – ’9’).
+The stored password contains a 64-bit salt and the encrypted output of the value 0..0 (16 bytes, i.e. 128
+bits) using AES-128-CBC with the salt as the IV for CBC; this output serves as the 128-bit key derived
+from the passphrase. The 64-bit salt is extended to 128-bits by adding zeros in the least significant bits (i.e.
+left-shifting the salt value). These two values will be stored using Base64 encoding in the password file,
+along with the 8-character username.
+
+For a given user, the salt is randomly generated at the time of password storage in the file. The passphrase is
+generated offline and the encrypted password is stored in the file, for each user. When you run the program,
+you are expected to know the passphrase for all users.
+The server emulates some of the common Linux commands. The commands that the server will support
+are as follows. For each command received from the client, the server will print the command name and the
+parameters in the Server’s Terminal window.
+
+• LS: The server will send the list of all files present in the current directory to the client, which will
+then print the message.
+• PWD: The server will send the current working directory to the client, which then print the message.
+• CD absolutepath: The server will change from the current directory to the specified directory in
+the absolute path.
+• CP src dest: The server will copy the file from the mentioned source to the destination with all it
+contents.
+• MV filename src dest: The server will move the file from the mentioned source to the destination
+with all it contents.
+
+
+SSH Client
+An end user will be running the SSH client to communicate with the SSH server. The client software can be
+partitioned into these components:
+(i) USER INPUT INTERFACE: The user-input interface accepts user commands, process them, and passes
+appropriate data to the network interface.
+(ii) NETWORK INTERFACE: The network interface is responsible for establishing the required socket with
+the SSH server. It is responsible for accepting the data provided by the USER INPUT INTERFACE above
+and transmitting it over the socket. It is responsible for reading the responses transmitted by the server, and
+either storing the data on file locally, or displaying it on the screen.
+The client program will wait at the prompt:
+Main>
+At the main prompt, the client types one of the following commands:
+ssh <IPADDR> <PORT> <USER>
+ssh <SYSNAME> <PORT> <USER>
+ssh <PORT> <USER>
+Here, the IP Address/System name and port number are provided if the SSH server is running on a different
+machine; and only the port number, if the SSH server is running on the same machine as the SSH Client.
+The USER parameter specifies the username.
+
+As part of processing the command above at main prompt, the following tasks should take place, in the
+background, in a sequential manner.
+• The client will initiate the connection to the SSH server.
+• The server will send its public key (base64 coded) to the client; This should then be stored in the local
+directory of the SSH client as server_pub:txt.
+• The client will create a randomly chosen 256-bit AES session key.
+• The client will encrypt {username, passphrase, sessionkey} with the server’s public key and send it to
+the server.
+• The server decrypts the above message with its private key and compares the username and passphrase
+in the message with the locally stored credentials of the client. The passphrase to 128-bit password
+conversion is as explained above.
+
+Then, the SSH server sends the acknowledgment as OK if client is successfully authenticated; otherwise, it sends NOK.
+If authentication is successful, further communication between client and server will be encrypted
+(AES in CCM mode) with the 256-bit session key as mentioned above; otherwise, the client program
+returns to the main prompt.
+
+After successful authentication, the client software interface will accept any one of the following commands:
+• listfiles: The client will send the message LS to the server, and print the server’s response.
+• cwd: The client will send the message PWD to the server, and print the server’s response.
+• chgdir absolutepath: The client will send the message CD absolutepath to the server, and print the
+server’s response.
+• cp filename src dest: The client will send the message CP filename src dest to the server, and
+print the server’s response.
+• mv filename src dest: The client will send the message MV filename src dest to the server, and
+print the server’s response.

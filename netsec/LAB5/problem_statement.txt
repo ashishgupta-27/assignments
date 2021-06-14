@@ -1,0 +1,111 @@
+The objective of this task is to implement a simple firewall rule matching algorithm. The match will be done
+a set of 6 fields, including source IP address, destination IP address, source port, destination port, protocol,
+and payload data.
+
+The program will be invoked as follows:
+./lab5-fw rulefile.txt pktfile.txt
+
+Here, rulefile.txt specifies the set of rules to be stored in the firewall database, and pktfile.txt contains relevant
+packet field information for a set of packets. Each packet has to be compared against all the rules in the
+database and the matching rules should be output by the program.
+
+Rule File
+The rule file will consist of a set of records, where each record spans multiple lines, in the format given below:
+BEGIN
+NUM: <<integer>>
+SRC IP ADDR: <<a.b.c.d/w>>
+DEST IP ADDR: <<j.k.l.m/w>>
+SRC PORT: <<integer1>>-<<integer2>>
+DEST PORT: <<integer3>>-<<integer4>>
+PROTOCOL: tcp | udp | icmp
+DATA: <<string>>
+END
+
+• Rule number is an integer in the range f1; 2; :::;1g. It is assumed that each rule number will be in
+strictly increasing order and that all rule numbers are unique.
+• IP Address range is given in standard notation. For example, 121.11.240.0/24 denotes that the IP
+address prefix length is 24 bits; 121.11.192.0/20 denotes that the IP address prefix length is 20 bits.
+The special value 0.0.0.0/0 indicates that any input IP address in the corresponding field (source or
+destination) will match this field of the rule.
+You can assume that each of the 4 components of the IP address (a, b, c, d) are within the appropriate
+limits (0 – 255) and that the prefix length (w) is between 8 and 32.
+
+For information regarding prefix lengths and IP address prefixes, please refer to any standard undergraduate networks textbook (e.g. Kurose and Ross, Tanenbaum).
+• The port number field specifies a range of port values, e.g. 1-127, 21-21, etc.
+Each port should be in the range of 1 to 65535. If a rule has a value outside this range, the rule will
+be discarded. Also, the first integer in the range should be less than or equal to the second integer. if
+this condition is not met, the rule is discarded.
+The special value 0-0 implies that any port number in the specified packet field (source or destination)
+can match this field of the rule.
+• Data: A string of length 10 bytes (characters), where the characters are from the sets, ’A’–’Z’, ’a’–’z’,
+’0’–’9’, and the “ ” (space) character. There is no need to check for validity of this data string.
+If the above string appears anywhere in a packet’s payload data, then a match is reported for the data field.
+The special string with only one character (“*”) will match all payload data.
+
+A sample rule is shown below:
+BEGIN
+NUM: 123
+SRC IP ADDR: 121.11.240.0/24
+DEST IP ADDR: 0.0.0.0/0
+SRC PORT: 0-0
+DEST PORT: 21-22
+PROTOCOL: tcp
+DATA: FTPServer
+END
+
+Packet File
+The packet file will consist of a set of records, where each record spans multiple lines, in the format given
+below:
+BEGIN
+NUM: <<integer>>
+SRC IP ADDR: r.s.t.u
+DEST IP ADDR: j.k.l.m
+SRC PORT: <<integer>>
+DEST PORT: <<integer>>
+PROTOCOL: tcp | udp | icmp
+DATA: <<string>>
+END
+
+• Packet number is an integer in the range f1; 2; :::;1g. It is assumed that each packet number will be
+in strictly increasing order and that all packet numbers are unique.
+• IP Address range is given in standard notation, e.g. 128.205.31.1.
+You can assume that each of the 4 components of the IP address (a, b, c, d) are within the appropriate limits (1 - 255).
+• Port number should be in the range of 0 to 65535. If a packet has a value outside this range, the packet
+will be discarded and not matched against any firewall rule.
+• Data: A string of length 100 bytes (characters), where the characters are from the sets, ’A’–’Z’, ’a’–
+’z’, ’0’–’9’, and the “ ” (space) character . There is no need to check for validity of this data string.
+
+A sample packet information is shown below:
+BEGIN
+NUM: 346
+SRC IP ADDR: 121.11.240.15
+DEST IP ADDR: 195.20.34.4
+SRC PORT: 45678
+DEST PORT: 21
+PROTOCOL: tcp
+DATA: Hello to FTPServer
+END
+
+File Processing and Output
+1. The program will first read all the input files and store it in memory in a suitable manner. This can be
+in a simple in-memory array. If you prefer to use a database (such as mySQL) to store the rules and
+call the appropriate APIs, you are free to do so.
+
+2. After reading all the rules, the program will print the rule numbers of all valid rules stored in the
+database, as follows:
+A total of <num1> rules were read; <num2> valid rules are stored.
+
+3. The program will then read the packet information file, one packet at a time. The program will match
+each packet’s information against all the rules in the database and print the numbers of the rules that
+match this packet, as follows:
+Packet number <id> matches <num> rule(s): <r1>, <r2>, <r3>.
+
+It is possible that a packet may match no rule in the database.
+If the packet has invalid data, the program should print a message as follows:
+Packet number <id> is invalid.
+For each valid packet, calculate the time taken to find the matching rule(s). You can use suitable
+timers to measure the computation time. At the end, the average per-packet computation time will be reported.
+
+4. After reading the entire packet file, the program will terminate with the following message (this includes
+all packets read including invalid ones):
+A total of <num> packet(s) were read from the file and processed. Bye.

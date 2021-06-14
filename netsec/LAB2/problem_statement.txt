@@ -1,0 +1,54 @@
+1 Project description
+The objective of this project is to implement the various components of a security-enhanced EMAIL system
+similar to PGP (Pretty Good Privacy) and GnuPG which is based on the OpenPGP standard. The cryptographic
+libraries from:
+• OpenSSL (www.openssl.org) (OR)
+• Java JCA (https://docs.oracle.com/javase/7/docs/technotes/guides/security/crypto/
+CryptoSpec.html) (OR)
+• Python (https://pypi.org/project/cryptography) can be used
+
+1.1 Encrypted Email
+The task is: Given an email message from User A to User B, message digest algorithm, encryption algorithm
+and the public/private key pairs of users, generate a security-enhanced output message that will handle:
+
+(a) Confidentiality ONLY, (b) Authentication/Integrity ONLY and (c) Authentication/Integrity and Confidentiality.
+
+We will assume that for a given set of users, the corresponding public/private key pair is locally
+available. In reality, the public key information for each user is available from some keyserver and the
+private key is held securely by each user. For this project, we will assume that Triple-key 3DES, and AES
+are available. We will assume that only CBC mode is used. The encryption steps are explained in detail in
+Stallings’ textbook. In order to achieve the different levels of security/privacy, the following mechanisms
+are used:
+
+Confidentiality ONLY (CONF):
+Sender: The email message is encrypted with a randomly generated secret message key (or session key)
+using a symmetric block cipher algorithm. The message key is encrypted using the receiver’s public key
+and pre-pended to the message. The [encrypted key, message] is then written into a file that can be sent
+using traditional email. In essence, given input text M from user A to user B, the transmitted message C is:
+C = [ EKUb (Ks; IVs) || EK(M)]
+where Ks is the session key (and any needed initialization vector, IVs) and EKUb is the receiver’s RSA
+public key. Receiver: The receiver uses its private key to decrypt the secret message key from the message file. This secret key is then fed to the decryption algorithm on the remainder of the message file to extract the plain-text message.
+
+Authentication/Integrity ONLY (AUIN):
+Sender: A message digest or hash of the given plain-text message is generated. The digest/hash is then
+encrypted using the sender’s private key. The [encrypted hash, message] is then written into a file that
+can be sent using traditional email. In essence, given input text M from user A to user B, the transmitted
+message C is:
+C = [EKRa (H(M))|| M]
+where EKRa is the sender’s RSA private key. Receiver: The receiver reads the encrypted hash from the
+message file and decrypts using the sender’s public key to generate the hash. The digest/hash of the
+remainder of the message file is computed and compared to the decrypted hash. If they match, success is
+declared.
+
+Confidentiality and Authentication/Integrity (COAI): 
+Sender: A message digest or hash of the given plaintext message is generated. The digest/hash is then encrypted using the sender’s private key. The [encrypted
+hash, message] is then encrypted with a randomly generated secret message key (or session key)
+using a symmetric block cipher algorithm. The message key is encrypted using the receiver’s public key
+and pre-pended to the message. The [encrypted key, encrypted hash, message] is then written into a file
+that can be sent using traditional email. In essence, given input textMfrom user A to user B, the transmitted
+message C is:
+C = [EKUb (Ks;Kh; IVs) || EKs (EKRa (H (Kh || M)) || M)]
+where Ks is the session key (and any needed initialization vector, IVs), Kh is the hashing key (of length
+equal to the hashing algorithm’s block size), EKRa is sender’s RSA private key and EKUb is receiver’s RSA
+public key. Receiver: The receiver performs the reverse operation to verify the sender, integrity and to
+extract the plain-text message.
