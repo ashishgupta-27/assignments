@@ -1,0 +1,1 @@
+(p(X) and (p(X) implies q(X))) implies q(X). 

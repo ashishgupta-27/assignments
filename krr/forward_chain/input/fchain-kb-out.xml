@@ -1,0 +1,13 @@
+<PROGRAM>
+    <PREDICATE text='men' pos='1:0'>
+        <CONSTANT text='socrates' pos='1:4'/>
+    </PREDICATE>
+    <IMPLIES text='implies' pos='2:7'>
+        <PREDICATE text='men' pos='2:0'>
+            <VARIABLE text='X' pos='2:4'/>
+        </PREDICATE>
+        <PREDICATE text='mortal' pos='2:15'>
+            <VARIABLE text='X' pos='2:22'/>
+        </PREDICATE>
+    </IMPLIES>
+</PROGRAM>

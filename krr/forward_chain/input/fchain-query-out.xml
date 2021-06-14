@@ -1,0 +1,5 @@
+<PROGRAM>
+    <PREDICATE text='mortal' pos='1:0'>
+        <CONSTANT text='socrates' pos='1:7'/>
+    </PREDICATE>
+</PROGRAM>

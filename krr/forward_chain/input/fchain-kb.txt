@@ -1,0 +1,2 @@
+men(socrates).
+men(X) implies mortal(X).

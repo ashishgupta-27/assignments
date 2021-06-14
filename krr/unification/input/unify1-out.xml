@@ -1,0 +1,18 @@
+<PROGRAM>
+    <PREDICATE text='parents' pos='1:0'>
+        <VARIABLE text='X' pos='1:8'/>
+        <FUNCTION text='father' pos='1:11'>
+            <VARIABLE text='X' pos='1:18'/>
+        </FUNCTION>
+        <FUNCTION text='mother' pos='1:22'>
+            <CONSTANT text='bill' pos='1:29'/>
+        </FUNCTION>
+    </PREDICATE>
+    <PREDICATE text='parents' pos='2:0'>
+        <CONSTANT text='bill' pos='2:8'/>
+        <FUNCTION text='father' pos='2:14'>
+            <VARIABLE text='Y' pos='2:21'/>
+        </FUNCTION>
+        <VARIABLE text='Z' pos='2:25'/>
+    </PREDICATE>
+</PROGRAM>

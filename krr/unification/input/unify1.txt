@@ -1,0 +1,2 @@
+parents(X, father(X), mother(bill)).
+parents(bill, father(Y), Z).

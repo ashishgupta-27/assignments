@@ -1,0 +1,7 @@
+forall Y   ( rich(Y) and man(Y)     implies loves(Y,jane) ).
+forall Y   ( woman(Y) and Y != jane implies loves(Y,john) ).
+forall X,Y ( loves(X,Y)             implies not blackMails(X,Y) ).
+loves(jane, john) or loves(jane, jim).
+exists X   ( adult(X) and blackMails(X, john) ).
+forall X,Y ( exists Z ( (p(X,Y) and p(Y,Z)) or p(X,Z) ) ).
+exists X   ( adult(X) implies blackMails(john) ).
