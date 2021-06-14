@@ -46,10 +46,10 @@ class TweeterStreamListener(tweepy.StreamListener):
 
 if __name__ == '__main__':
 
-    consumer_key = 'HZwFfqk2U9b355g3K4uJ7fRJl'
-    consumer_secret = 'CtxUtCxbDvtMRHCJtnGCwboOT3ZC9JgxdVwhGaKsK2HQ8MULl1'
-    access_key = '113250434-kEKOwA1E6B7hHJ3uWxCOSUNkAMeQnYm38CIlwli6'
-    access_secret = 'iQNzbgIS3rjNcpkTpGa7bI68qm0gXSSPvb408lwZ8hcEH'
+    consumer_key = '<CHANGE_VALUES_HERE>'
+    consumer_secret = '<CHANGE_VALUES_HERE>'
+    access_key = '<CHANGE_VALUES_HERE>'
+    access_secret = '<CHANGE_VALUES_HERE>'
 
     topic=sys.argv[1]
 
